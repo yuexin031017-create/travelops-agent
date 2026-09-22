@@ -17,7 +17,7 @@ def test_event_collection_agent():
 
     agent = EventCollectionAgent(
         name="EventCollectionAgent",
-        model_config_name="doubao_api"
+        model_config_name="deepseek_api"
     )
 
     test_cases = [

@@ -11,7 +11,7 @@ RAG知识库智能体 RAGKnowledgeAgent
 技术栈：
 - Milvus Lite: 轻量级向量数据库（本地存储）
 - sentence-transformers: 文本向量化模型
-- LLM: 用户配置的豆包模型用于生成答案
+- LLM: 用户配置的 DeepSeek 模型用于生成答案
 
 安装：
 pip install milvus sentence-transformers

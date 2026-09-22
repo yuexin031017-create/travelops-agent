@@ -31,7 +31,7 @@ def get_model_config():
     """
     return {
         "model_type": "openai_chat",  # 使用OpenAI兼容接口
-        "config_name": "doubao_api",
+        "config_name": "deepseek_api",
         "model_name": LLM_CONFIG["model_name"],
         "api_key": LLM_CONFIG["api_key"],
         "base_url": LLM_CONFIG["base_url"],

@@ -19,7 +19,7 @@ LLM_CONFIG = {
     "model_name": os.getenv("TRAVELOPS_MODEL_NAME") or os.getenv("OPENAI_MODEL", "Model_Name"),
     "base_url": os.getenv(
         "TRAVELOPS_BASE_URL",
-        os.getenv("OPENAI_BASE_URL", "https://ark.cn-beijing.volces.com/api/v3"),
+        os.getenv("OPENAI_BASE_URL", "https://api.deepseek.com"),
     ),
     "temperature": 0.7,
     "max_tokens": 8192,

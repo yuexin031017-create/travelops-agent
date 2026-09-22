@@ -1,6 +1,6 @@
 # TravelOps Agent｜智能商旅差旅助手
 
-基于**豆包大模型**和**AgentScope框架**的多智能体旅行规划系统，采用Plan-and-Execute架构，实现智能意图识别、两层记忆系统、RAG知识库、联网搜索和优先级并行调度。
+基于**DeepSeek模型**和**AgentScope框架**的多智能体旅行规划系统，采用Plan-and-Execute架构，实现智能意图识别、两层记忆系统、RAG知识库、联网搜索和优先级并行调度。
 
 ## ✨ 核心亮点
 
@@ -272,21 +272,18 @@ pip install ddgs==9.10.0                    # 网络搜索
 
 ### 2. 配置模型
 
-编辑 `config.py`，填入你的豆包大模型API密钥：
+复制 `.env.example` 为 `.env`，填入你的 DeepSeek API 配置：
 
-```python
-LLM_CONFIG = {
-    "api_key": "your-api-key-here",  # 替换为你的API密钥
-    "model_name": "doubao-seed-1-6-flash-250828",
-    "base_url": "https://ark.cn-beijing.volces.com/api/v3",
-    "temperature": 0.7,
-    "max_tokens": 8192,
-}
+```bash
+TRAVELOPS_API_KEY=your-deepseek-api-key
+TRAVELOPS_MODEL_NAME=deepseek-flash
+TRAVELOPS_BASE_URL=https://api.deepseek.com
 ```
 
 **配置说明**：
-- `api_key`: 豆包大模型API密钥（必填）
-- `model_name`: 模型名称（推荐使用 flash 系列）
+- `TRAVELOPS_API_KEY`: DeepSeek API密钥（必填）
+- `TRAVELOPS_MODEL_NAME`: DeepSeek 模型名称
+- `TRAVELOPS_BASE_URL`: DeepSeek OpenAI兼容接口地址
 - `temperature`: 控制生成的随机性（0-1，0.7为推荐值）
 - `max_tokens`: 最大输出token数（8192）
 
@@ -456,7 +453,7 @@ shanglv/
 
 ### 核心框架
 - 📦 **AgentScope 1.0.16** - 多智能体框架
-- 🤖 **豆包大模型 (doubao-seed-1-6-flash-250828)** - 大语言模型
+- 🤖 **DeepSeek (deepseek-flash)** - 大语言模型
 
 ### 数据存储
 - 🗄️ **PostgreSQL** - 长期记忆持久化（用户偏好、历史行程、聊天记录）
@@ -492,8 +489,8 @@ shanglv/
 ## ⚠️ 注意事项
 
 ### 模型配置
-- 必须配置豆包大模型API密钥（在 `config.py` 中）
-- 推荐使用 flash 系列模型（响应速度快）
+- 必须配置 DeepSeek API 密钥（在 `.env` 中）
+- 推荐使用适合当前账号的 DeepSeek 模型
 - BGE Embedding模型需下载到 `data/models/bge-small-zh-v1.5/`
 
 ### 数据存储

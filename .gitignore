@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+venv*/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local credentials
+.env
+
+# Local Claude/Desktop settings
+.claude/settings.local.json
+.claude/claudian-settings.json
+
+# Generated local state and test reports
+data/memory/*.json
+tests/results/
+
+# AgentScope
+.agentscope/
+
+# Data
+data/rag_knowledge/
+.claude/skills/**/data/rag_knowledge/
+data/preferences/*.json
+!data/preferences/.gitkeep
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
